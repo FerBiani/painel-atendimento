@@ -1,12 +1,8 @@
+p {
+  margin: 5px 0;
+}
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-}
-
-.App-header {
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
@@ -17,6 +13,43 @@
   color: white;
 }
 
-.App-link {
-  color: #09d3ac;
+.texto-grande {
+  font-size: calc(60px + 2vmin);
+  margin: 20px;
+}
+
+.texto-pequeno {
+  font-size: calc(5px + 2vmin);
+}
+
+.titulo {
+  width: 100%;
+  background-color: #fff;
+  padding: 20px 0;
+  color: #282c34;
+  text-align: center;
+}
+
+.principal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.historico {
+  width: 100%;
+  flex-direction: row;
+  display: flex;
+  justify-content: space-around;
+}
+
+.chamado {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border: 1px solid #fff;
+  padding: 20px;
 }
