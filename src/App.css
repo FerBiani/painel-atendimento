@@ -1,14 +1,187 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 p {
   margin: 5px 0;
 }
+
+/*bootstrap tables css*/
+
+.table {
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 1rem;
+}
+
+.table th,
+.table td {
+  padding: 0.75rem;
+  vertical-align: top;
+  border-top: 1px solid #eceeef;
+}
+
+.table thead th {
+  vertical-align: bottom;
+  border-bottom: 2px solid #eceeef;
+}
+
+.table tbody + tbody {
+  border-top: 2px solid #eceeef;
+}
+
+.table .table {
+  background-color: #fff;
+}
+
+.table-sm th,
+.table-sm td {
+  padding: 0.3rem;
+}
+
+.table-bordered {
+  border: 1px solid #eceeef;
+}
+
+.table-bordered th,
+.table-bordered td {
+  border: 1px solid #eceeef;
+}
+
+.table-bordered thead th,
+.table-bordered thead td {
+  border-bottom-width: 2px;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.table-hover tbody tr:hover {
+  background-color: rgba(0, 0, 0, 0.075);
+}
+
+.table-active,
+.table-active > th,
+.table-active > td {
+  background-color: rgba(0, 0, 0, 0.075);
+}
+
+.table-hover .table-active:hover {
+  background-color: rgba(0, 0, 0, 0.075);
+}
+
+.table-hover .table-active:hover > td,
+.table-hover .table-active:hover > th {
+  background-color: rgba(0, 0, 0, 0.075);
+}
+
+.table-success,
+.table-success > th,
+.table-success > td {
+  background-color: #dff0d8;
+}
+
+.table-hover .table-success:hover {
+  background-color: #d0e9c6;
+}
+
+.table-hover .table-success:hover > td,
+.table-hover .table-success:hover > th {
+  background-color: #d0e9c6;
+}
+
+.table-info,
+.table-info > th,
+.table-info > td {
+  background-color: #d9edf7;
+}
+
+.table-hover .table-info:hover {
+  background-color: #c4e3f3;
+}
+
+.table-hover .table-info:hover > td,
+.table-hover .table-info:hover > th {
+  background-color: #c4e3f3;
+}
+
+.table-warning,
+.table-warning > th,
+.table-warning > td {
+  background-color: #fcf8e3;
+}
+
+.table-hover .table-warning:hover {
+  background-color: #faf2cc;
+}
+
+.table-hover .table-warning:hover > td,
+.table-hover .table-warning:hover > th {
+  background-color: #faf2cc;
+}
+
+.table-danger,
+.table-danger > th,
+.table-danger > td {
+  background-color: #f2dede;
+}
+
+.table-hover .table-danger:hover {
+  background-color: #ebcccc;
+}
+
+.table-hover .table-danger:hover > td,
+.table-hover .table-danger:hover > th {
+  background-color: #ebcccc;
+}
+
+.thead-inverse th {
+  color: #fff;
+  background-color: #292b2c;
+}
+
+.thead-default th {
+  color: #464a4c;
+  background-color: #eceeef;
+}
+
+.table-inverse {
+  color: #fff;
+  background-color: #292b2c;
+}
+
+.table-inverse th,
+.table-inverse td,
+.table-inverse thead th {
+  border-color: #fff;
+}
+
+.table-inverse.table-bordered {
+  border: 0;
+}
+
+.table-responsive {
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+}
+
+.table-responsive.table-bordered {
+  border: 0;
+}
+
+/* ################## */
 
 .App {
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   font-size: calc(10px + 2vmin);
   color: white;
 }
@@ -16,10 +189,13 @@ p {
 .texto-grande {
   font-size: calc(60px + 2vmin);
   margin: 20px;
+  color: #282c34;
+  font-weight: bold;
 }
 
 .texto-pequeno {
   font-size: calc(5px + 2vmin);
+  color: #282c34;
 }
 
 .titulo {
@@ -30,11 +206,47 @@ p {
   text-align: center;
 }
 
+.content {
+  display: flex;
+  flex: 1;
+}
+
 .principal {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.conteudo-esquerda {
+  padding: 0 20px;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.conteudo-direita {
+  padding: 0 20px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header {
+  background-color: #fff;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  padding: 10px 20px;
+  font-size: 1.5em;
+  color: #282c34;
 }
 
 .historico {
@@ -44,12 +256,32 @@ p {
   justify-content: space-around;
 }
 
-.chamado {
+.box {
+  width: 100%;
+  height: 40vh;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  border: 1px solid #fff;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  margin: 10px 40px;
+}
+
+.conteudo-direita .box {
+  height: 83vh;
+}
+
+.box-header {
+  font-size: 1.5em;
+  color: #282c34;
+  font-weight: 400;
+}
+
+.box-body {
+  width: 100%;
   justify-content: center;
   align-items: center;
   text-align: center;
-  border: 1px solid #fff;
-  padding: 20px;
 }
