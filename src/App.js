@@ -111,7 +111,6 @@ class App extends Component {
                       <tr>
                         <th className="texto-pequeno">Paciente</th>
                         <th className="texto-pequeno">Especialidade</th>
-                        <th className="texto-pequeno">Horário</th>
                       </tr>
                     </thead>
                     <tbody>
@@ -121,7 +120,6 @@ class App extends Component {
                             <tr>
                               <td className="texto-pequeno">{paciente.nome}</td>
                               <td className="texto-pequeno">{paciente.especialidade}</td>
-                              <td className="texto-pequeno">{this.state.listaChamada[0].horario}</td>
                             </tr>
                           )
                         }
