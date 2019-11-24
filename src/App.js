@@ -50,19 +50,17 @@ class App extends Component {
 
   adicionarNaLista = (chamado) => {
 
-    if(this.state.listaChamada.length > 0) {
-      if(chamado['id'] == this.state.listaChamada[0].id) {
-        return false
-      }
-    }
+    // if(this.state.listaChamada.length > 0) {
+    //   if(chamado['id'] == this.state.listaChamada[0].id) {
+    //     return false
+    //   }
+    // }
 
     const lista = this.state.listaChamada
 
     lista.unshift(chamado)
 
-    if(lista.length > 5) {
-      lista.pop()
-    }
+    //lista.reverse()
 
     this.setState({
       listaChamada: lista
@@ -111,18 +109,18 @@ class App extends Component {
                       <tr>
                         <th className="texto-pequeno">Paciente</th>
                         <th className="texto-pequeno">Especialidade</th>
+                        <th className="texto-pequeno">Horário da consulta</th>
                       </tr>
                     </thead>
                     <tbody>
-                      {this.state.listaChamada.map((paciente, index) => {
-                        if(index != 0) {
+                      {this.state.listaChamada.map((paciente) => {
                           return (
                             <tr>
                               <td className="texto-pequeno">{paciente.nome}</td>
                               <td className="texto-pequeno">{paciente.especialidade}</td>
+                              <td className="texto-pequeno">{paciente.horario}</td>
                             </tr>
                           )
-                        }
                       })}
                     </tbody>
                   </table>
