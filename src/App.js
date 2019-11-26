@@ -101,29 +101,31 @@ class App extends Component {
             <div className="conteudo-direita">
               <div className="box">
                 <div className="box-header">
-                  HISTÓRICO
+                  ÚLTIMAS CHAMADAS
                 </div>
                 <div className="box-body">
-                  <table className="table table-bordered">
-                    <thead>
-                      <tr>
-                        <th className="texto-pequeno">Paciente</th>
-                        <th className="texto-pequeno">Especialidade</th>
-                        <th className="texto-pequeno">Horário da consulta</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      {this.state.listaChamada.map((paciente) => {
-                          return (
-                            <tr>
-                              <td className="texto-pequeno">{paciente.nome}</td>
-                              <td className="texto-pequeno">{paciente.especialidade}</td>
-                              <td className="texto-pequeno">{paciente.horario}</td>
-                            </tr>
-                          )
-                      })}
-                    </tbody>
-                  </table>
+                 
+                    <table className="table table-bordered">
+                      <thead>
+                        <tr>
+                          <th className="texto-pequeno">Paciente</th>
+                          <th className="texto-pequeno">Especialidade</th>
+                          <th className="texto-pequeno">Horário da consulta</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {this.state.listaChamada.map((paciente) => {
+                            return (
+                              <tr>
+                                <td className="texto-pequeno">{paciente.nome}</td>
+                                <td className="texto-pequeno">{paciente.especialidade}</td>
+                                <td className="texto-pequeno">{paciente.horario}</td>
+                              </tr>
+                            )
+                        })}
+                      </tbody>
+                    </table>
+            
                 </div>
               </div>
             </div>
