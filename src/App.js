@@ -50,11 +50,11 @@ class App extends Component {
 
   adicionarNaLista = (chamado) => {
 
-    // if(this.state.listaChamada.length > 0) {
-    //   if(chamado['id'] == this.state.listaChamada[0].id) {
-    //     return false
-    //   }
-    // }
+    if(this.state.listaChamada.length > 0) {
+      if(chamado['id'] == this.state.listaChamada[0].id) {
+        return false
+      }
+    }
 
     const lista = this.state.listaChamada
 
@@ -103,7 +103,7 @@ class App extends Component {
                 <div className="box-header">
                   ÚLTIMAS CHAMADAS
                 </div>
-                <div className="box-body">
+                <div className="box-body overflow-y">
                  
                     <table className="table table-bordered">
                       <thead>

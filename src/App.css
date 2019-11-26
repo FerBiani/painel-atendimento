@@ -14,7 +14,6 @@ p {
   width: 100%;
   max-width: 100%;
   margin-bottom: 1rem;
-  height: 250px;
 }
 
 .table th,
@@ -285,5 +284,8 @@ p {
   justify-content: center;
   align-items: center;
   text-align: center;
+}
+
+.overflow-y {
   overflow-y: scroll;
 }
